@@ -1,0 +1,26 @@
+{
+  "name": "adagios",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattthat/adagios.git"
+  },
+  "keywords": [
+    "web",
+    "workers",
+    "websockets",
+    "ajax",
+    "p2p"
+  ],
+  "author": "Matt That <matt.that@gmail.com> (http://matt-that.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mattthat/adagios/issues"
+  },
+  "homepage": "https://github.com/mattthat/adagios#readme"
+}
