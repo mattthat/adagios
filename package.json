@@ -4,11 +4,37 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepublishOnlu": "npm run release",
+    "ahead": "rimraf node_modules ; rimraf package-lock.json ; ncu -u ; npm install",
+    "clean": "rimraf d0x ; rimraf dist ; mkdir -p dist d0x",
+    "copy": "cp ./resources/html/index.html ./dist",
+    "docs": "esdoc -c esdoc.json",
+    "lint": "eslint . --fix",
+    "snapshot": "npm run clean && npm run lint && webpack && npm run copy",
+    "release": "npm run snapshot && npm run docs",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattthat/adagios.git"
+    "url": "git@github.com:tadalabs/adagios.git"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "cssmin": "^0.4.3",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "npm-check-updates": "^2.14.2",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "keywords": [
     "web",
@@ -20,7 +46,7 @@
   "author": "Matt That <matt.that@gmail.com> (http://matt-that.com)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/mattthat/adagios/issues"
+    "url": "https://github.com/tadalabs/adagios/issues"
   },
-  "homepage": "https://github.com/mattthat/adagios#readme"
+  "homepage": "https://github.com/tadalabs/adagios#readme"
 }
